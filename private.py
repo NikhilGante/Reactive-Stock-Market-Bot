@@ -1,1 +1,1 @@
-api_key = "Hello World"
+api_key = "Hello"
