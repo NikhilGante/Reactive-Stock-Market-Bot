@@ -1,3 +1,1 @@
-# Reactive Stock Market Bot
- 
-boi.
+# A Reactive Stock Market Bot using the Alpaca paper trading API.
