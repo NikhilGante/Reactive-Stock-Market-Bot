@@ -11,5 +11,7 @@ api = alpaca_trade_api.REST(private.api_key_id, private.secret_key, endpoint)
 account = api.get_account()
 
 print(account.status)
-
-
+# print(api.list_assets(status = 'active'))
+# print(account.__doc__)
+print(api.get_barset('AAPL', 'day', limit=5)['AAPL'])
+ 
