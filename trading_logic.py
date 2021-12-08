@@ -1,4 +1,4 @@
-class make_money:
+class trade_algo:
     def __init__(self, lst):
         self.starting_capital = 1000
         self.cash = self.starting_capital
@@ -10,7 +10,7 @@ class make_money:
         self.index = 0 # iterator of for loop
         self.done = False
         self.trades = []
-        self.buffer_size = 0.00 # how much the new share must exceed the old share
+        self.buffer_size = 0.50 # how much the new share must exceed the old share
         # self.buy = False
         # self.sell = False
 
@@ -97,7 +97,7 @@ lst = [
     140.42, 140.44, 140.46, 140.38, 140.42, 140.91
 ]
 
-obj = make_money(lst)
+obj = trade_algo(lst)
 
 obj.run()
 print("total: ", obj.cash)
