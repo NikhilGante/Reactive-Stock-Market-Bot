@@ -38,4 +38,26 @@ def serializelist(lst):
   ret += "]"
   return ret
 
+def writeTradeData(data):
+  file = open("tradesav.txt", "w+")
+  for dct in data:
+    print(f"{dct['action']} {dct['qty']} {dct['ticker']} {dct['price']}", file=file)
+  file.close()
+
+def readTradeData():
+  file = open("tradesav.txt", "r")
+  res = []
+  for ln in file.readlines():
+    ln = ln.split(' ')
+    tmp = {
+      "action": ln[0],
+      "qty": int(ln[1]),
+      "ticker": ln[2],
+      "price": float(ln[3])
+    }
+    res.append(tmp)
+  file.close()
+  return res
+    
+    
     
